@@ -44,7 +44,7 @@ module "eks" {
 }
 
 resource "aws_dynamodb_table" "terraform_lock" {
-  name           = "Lock-Files"
+  name           = "LockFiles"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "LockID"
 
