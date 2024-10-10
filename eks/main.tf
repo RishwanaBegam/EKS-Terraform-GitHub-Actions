@@ -42,3 +42,14 @@ module "eks" {
 
   addons = var.addons
 }
+
+resource "aws_dynamodb_table" "terraform_lock" {
+  name           = "Lock-Files"
+  billing_mode   = "PAY_PER_REQUEST"
+  hash_key       = "state-lock"
+
+  attribute {
+    name = "LockID"
+    type = "S"
+  }
+}
