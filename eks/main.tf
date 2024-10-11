@@ -43,7 +43,7 @@ module "eks" {
   addons = var.addons
 }
 
-resource "aws_dynamodb_table" "terraform_lock" {
+/*resource "aws_dynamodb_table" "terraform_lock" {
   name           = "LockFiles"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "LockID"
@@ -52,4 +52,4 @@ resource "aws_dynamodb_table" "terraform_lock" {
     name = "LockID"
     type = "S"
   }
-}
+}*/
